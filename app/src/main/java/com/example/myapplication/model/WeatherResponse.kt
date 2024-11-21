@@ -9,11 +9,11 @@ data class WeatherResponse(
 data class Hourly(
     val time: List<String>?,
     val temperature_2m: List<Double>?,
-    val cloudCover: List<Int>?
+    val cloud_cover: List<Int>?
 )
 
 data class HourlyData(
     val time: String,
     val temperature: Double,
-    val cloudCover: Int
+    val cloud_cover: Int
 )

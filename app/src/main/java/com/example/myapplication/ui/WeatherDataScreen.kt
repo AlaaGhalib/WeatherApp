@@ -44,7 +44,7 @@ fun WeatherDataScreen(latitude: Float, longitude: Float) {
                             HourlyData(
                                 time = time,
                                 temperature = hourly.temperature_2m?.get(index) ?: 0.0,
-                                cloudCover = hourly.cloudCover?.get(index) ?: 0
+                                cloud_cover = hourly.cloud_cover?.get(index) ?:0,
                             )
                         } ?: emptyList()
                     }
@@ -80,6 +80,7 @@ fun WeatherDataItem(data: HourlyData) {
     ) {
         Text(text = "Time: ${data.time}")
         Text(text = "Temperature: ${data.temperature} °C")
-        Text(text = "Cloud Cover: ${data.cloudCover}%")
+        Text(text = "Cloud Cover: ${data.cloud_cover}%")
+
     }
 }
