@@ -29,7 +29,6 @@ fun WeatherDataItem(data: HourlyData) {
 
 @Composable
 fun CloudCoverImage(cloudCover: Int) {
-    // Select appropriate drawable resource based on cloudCover value
     val cloudImage: Painter = when {
         cloudCover in 0..50 -> painterResource(id = R.drawable.cloud50_0)
         cloudCover in 51..80 -> painterResource(id = R.drawable.cloud80_50)

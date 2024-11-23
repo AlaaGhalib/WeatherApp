@@ -18,6 +18,7 @@ import com.example.myapplication.api.ApiClient
 import com.example.myapplication.api.WeatherService
 import com.example.myapplication.model.HourlyData
 import com.example.myapplication.model.WeatherResponse
+import com.example.myapplication.ui.themes.WeatherDataItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -68,19 +69,5 @@ fun WeatherDataScreen(latitude: Float, longitude: Float) {
                 WeatherDataItem(data)
             }
         }
-    }
-}
-
-@Composable
-fun WeatherDataItem(data: HourlyData) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp)
-    ) {
-        Text(text = "Time: ${data.time}")
-        Text(text = "Temperature: ${data.temperature} °C")
-        Text(text = "Cloud Cover: ${data.cloud_cover}%")
-
     }
 }
