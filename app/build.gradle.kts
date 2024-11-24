@@ -93,6 +93,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     implementation("androidx.activity:activity-compose:1.7.2")
 
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0") // ViewModel support for Compose
+    implementation ("androidx.compose.runtime:runtime-livedata:1.0.0") // LiveData support for Compose
+
 
 
 }
